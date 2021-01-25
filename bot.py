@@ -16,6 +16,13 @@ async def on_ready():
       print(f'{bot.user.name} has connected to Discord!')
       
 
+@bot.command(name="helpme")
+async def help(ctx):
+      await ctx.send("!42 -- This supplies a random Hitchhiker\'s Guide to the Galaxy Quote.")
+      await ctx.send ("!POSW -- This supplies a random quote from Internet shipwreck Steve McRae")
+      await ctx.send ("!62iq -- This supplies one of three memorable bits of stupidity from the shipwreck\'s attack goblin.")
+      await ctx.send ("!squirreljudge <question>.  Find out what the Squirrel Judge thinkgs you're guilty of.")
+      await ctx.send ("!RedDwarf -- Get some wisdom about how not to be a smeghead from Red Dwarf.")
 
 
 @bot.command(name= '42')
@@ -28,7 +35,10 @@ async def  the_old_forty_two(ctx):
                                      "That's just perfectly normal paranoia. Everyone in the universe has that.",
                                      "You'll have a national philosopher's strike on  your hands!",
                                      "The Hitchhiker's Guid the Galaxy defines the marketing division of the Sirius Cybenetics corporatoin as a bunch of mindless jerks who'll be the first against the wall when the revolution comes.",
-                                     "The marketing divsion of the Sirius Cybernetics Corporation defines a robot as your plastic pal who's fun to be with!"]
+                                     "The marketing divsion of the Sirius Cybernetics Corporation defines a robot as your plastic pal who's fun to be with!"
+                                     "The Vogon Constructor ships hung in the sky in much the same way that bricks don\'t",
+                                      "It has been said the Vogons are not above bribery and corruption in the same way that the sea is not above the clouds.",
+                                      "This planet has or rather had a problem. The problem was that most of the people  on it [even those with digital watches] were unhappy."]
 
 
 
@@ -49,7 +59,7 @@ async def posw(ctx):
                                         'We don\'t do drama!',
                                         'I\'ve never faked a screenshot.',
                                         'I\'ve never said rocks are atheists!',
-                                        'I\ve never engaged in rape apologetics!',
+                                        'I\'ve never engaged in rape apologetics!',
                                         'Black People do Coke',
                                         'Cheshire hase borderline psychopathic tendencies.',
                                         'I remember she told me that she was mentally ill.',
@@ -141,7 +151,22 @@ async def RedDwarf(ctx):
       response = random.choice(redDwarfQuotes)
       await ctx.send (response)
                                      
-                         
+#===============================================================================================================
+# And now we are putting in the Squirrel of Judgment so he can decide what you're guilty of.
+#===============================================================================================================
+@bot.command(name = "squirreljudge")
+async def judge(ctx):
+
+      judgments = [ "Guilty",
+                           "Not guilty.",
+                           "Not guilty by reason of mental disease or defect.",
+                           "You're gulty of crimes agaisnt squirrel kind, porpoise.",
+                           "Guilty of High Treason.",
+                           "Guilty of starving squirrels by keeping them from your bird feeder."]
+
+      
+      response = random.choice(judgments)
+      await ctx.send (response)
                                      
                                      
                                      
