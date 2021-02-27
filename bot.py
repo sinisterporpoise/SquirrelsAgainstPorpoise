@@ -16,7 +16,7 @@ async def on_ready():
       print(f'{bot.user.name} has connected to Discord!')
       
 
-@bot.command(name="helpme")
+@bot.command(name="helpme", help="Gives a list of commands.")
 async def help(ctx):
       await ctx.send("!42 -- This supplies a random Hitchhiker\'s Guide to the Galaxy Quote.")
       await ctx.send ("!POSW -- This supplies a random quote from Internet shipwreck Steve McRae")
@@ -25,20 +25,26 @@ async def help(ctx):
       await ctx.send ("!RedDwarf -- Get some wisdom about how not to be a smeghead from Red Dwarf.")
 
 
-@bot.command(name= '42')
+@bot.command(name= '42', help="Get a random Hitchhiker's Guide Quote")
 async def  the_old_forty_two(ctx):
       Hitchhiker_quotes = [ "Seven and a half million years and all you come up with is 42?",
-                                     "Don\'t Panic"
+                                     "Don\'t Panic",
                                      "Far out in the uncharted backwaters...",
                                      "I want a Pan Galactic Gargle Blaster." ,
                                      "The modern elevator has in much in common with an ancient elevator as the entire wing of the Sirius Cybernetics Marketing Division has in common with a packet of mixed nuts.",
                                      "That's just perfectly normal paranoia. Everyone in the universe has that.",
                                      "You'll have a national philosopher's strike on  your hands!",
-                                     "The Hitchhiker's Guid the Galaxy defines the marketing division of the Sirius Cybenetics corporatoin as a bunch of mindless jerks who'll be the first against the wall when the revolution comes.",
-                                     "The marketing divsion of the Sirius Cybernetics Corporation defines a robot as your plastic pal who's fun to be with!"
+                                     "The Hitchhiker's Guide the Galaxy defines the marketing division of the Sirius Cybenetics corporatoin as a bunch of mindless jerks who'll be the first against the wall when the revolution comes.",
+                                     "The marketing divsion of the Sirius Cybernetics Corporation defines a robot as your plastic pal who's fun to be with!",
                                      "The Vogon Constructor ships hung in the sky in much the same way that bricks don\'t",
                                       "It has been said the Vogons are not above bribery and corruption in the same way that the sea is not above the clouds.",
-                                      "This planet has or rather had a problem. The problem was that most of the people  on it [even those with digital watches] were unhappy."]
+                                      "This planet has or rather had a problem. The problem was that most of the people  on it [even those with digital watches] were unhappy.",
+                                      "Although the parking lot was nearly empty, Ford nevertheless weaved his way through it.",
+                                      "So long and thanks for all the fish!",
+                                      "The Vogon Constructor Ships hung in the sky in much the same way that bricks don\'t",
+                                      "\"Myself? I'd trust him until the end of the world,\" said Ford. \How long away is that?\" replied Arthur. \"About 12 minutes.\"",
+                                      "What do you mean you've never visited Alpha Centauri? For heaven\'s sake mankind. It\'s only four light years away."]
+      
 
 
 
@@ -47,13 +53,13 @@ async def  the_old_forty_two(ctx):
       await  ctx.send(response)
       return
 
-@bot.command(name = "Steve_McRae")
+@bot.command(name = "Steve_McRae", help="Well, the squirrels are worried about being equated with Steve Mcrae.")
 async def Steve(ctx):
          
       await  ctx.send(f'Put that camera down! That\'s Squirrel Abuse!')
       return
 
-@bot.command(name = 'POSW')
+@bot.command(name = 'POSW', help="Get a random bit of Wisdom from Petty Officer ShipWreck Steve McRae")
 async def posw(ctx):
       Steve_quotes = [ 'You\'re stealing money from my daughter, Kyle!',
                                         'We don\'t do drama!',
@@ -61,29 +67,33 @@ async def posw(ctx):
                                         'I\'ve never said rocks are atheists!',
                                         'I\'ve never engaged in rape apologetics!',
                                         'Black People do Coke',
-                                        'Cheshire hase borderline psychopathic tendencies.',
+                                        'Cheshire has borderline psychopathic tendencies.',
                                         'I remember she told me that she was mentally ill.',
                                         'The worst mistake you can make is underestimating Cheshire.',
                                         'I live very frugally.',
                                         'I have zero disability rating from the VA.',
                                         'Kyle stole $60,000 from the fans.',
                                         'I don\'t get why people compare me to Donald Trump.',
-                                        'She got my video taken down in  [Indiana] UK!',
+                                        'She got my video taken down in the [Indiana] UK!',
                                         'If you think I\'ve said someone is dumb, you\'re stupid',
                                         '.9999999999..... = 1',
                                         'I\'m astronomically honest.',
                                         'I never lie.',
-                                         'I\'ve never had a restraining order.',
-                                         'I have the equivalent of a PhD [from the Navy\'s Nuke School',
-                                         'How dare you bring my daughter into this?',
-                                         'Kyle is going to gel.',
-                                         'We only respond to evidence not accusations.',
-                                         '100% sure Nate Broady is Kyles lawyer.',
-                                          'I am unleashed.',
-                                          'That\'s  how it\'s used in philosophy.',
-                                          'Have you read Draper?',
-                                          'I talk to PhDs',
-                                          'I have never been part of any teen mom group!']
+                                        'I\'ve never had a restraining order.',
+                                        'I have the equivalent of a PhD [from the Navy\'s Nuke School]',
+                                        'How dare you bring my daughter into this?',
+                                        'Kyle is going to gel.',
+                                        'We only respond to evidence not accusations.',
+                                        '100% sure Nate Broady is Kyles lawyer.',
+                                        'I am unleashed.',
+                                        'That\'s  how it\'s used in philosophy.',
+                                        'Have you read Draper?',
+                                        'I talk to PhDs',
+                                        'I have never been part of any teen mom group!',
+                                        'It\'s not a troll group. It\'s the opposite of a troll group.',
+                                        'You\'re inept in philosophy.',
+                                        'I am exceptionally clear and it is quite unreasonble to make what is normative and understood by anyone who is competent enough to discuss any of this require such unreasonable explicistness.',
+                                        'I have never once had any philosopher say I use dishonest rhetorical tacics. NEVER ONE.']
      
 
             
@@ -94,7 +104,7 @@ async def posw(ctx):
  #===================================================
 # And now for 62iq....
  #===================================================
-@bot.command(name = '62iq')
+@bot.command(name = '62iq',help='Quotes from a Low IQ Trash Goblin.')
 async def  _62iq (ctx):
             Cheshire_quotes = [ "I\'m not convinced second hand smoke is a thing.",
                                             "I give my dog small amounts of chocolate.",
@@ -109,13 +119,13 @@ async def  _62iq (ctx):
             await  ctx.send(response)
             return
 
-@bot.command(name = 'nut')
+@bot.command(name = 'nut', help="Give a Squirrel a Nut.")
 async def nut(ctx):
               await ctx.send('Yes, please! May I have another?')
               return
 
 
-@bot.command(name="RedDwarf")
+@bot.command(name="RedDwarf", help="Get a Red Dwarf quote.")
 async def RedDwarf(ctx):
       redDwarfQuotes = [ "Now kindly kluck off before I extract your giblet and shove a large seasoned onion between the lips you never kiss with.",
                                      "Call it extreme if you like, but I propose we hit it hard and hit it fast with a major - and I mean major - leaflet campaign.",
@@ -124,7 +134,7 @@ async def RedDwarf(ctx):
                                      "I tell you one thing. I\'ve been to a parallel universe. I've seen time running backwards. I\'ve playe pool with planets, and I\'ve given birth to twins, but I never thought in my entire life I\'d taste an edible Pot Noodle.",
                                      "It\'s better to have loved and lost than to listen to an album by Olivia Newton-John.",
                                      "[Reading Hitler's Diary] Things to do: Stop milk, pay papers, invade Czechoslovakia!",
-                                     "I knew I was lying. No silocon heaven? Perposterous! Where would all the calculators go?",
+                                     "I knew I was lying. No silicon heaven? Perposterous! Where would all the calculators go?",
                                      "Has anyone ever told you that the configuration and juxtaposition of your features is extraordinarily apposite?",
                                     "Of course, lager! The only thing that can kill a vindaloo!",
                                      "How come you need more memory? Over the hyears you\'ve had more RAM than a field of sheep!",
@@ -154,7 +164,7 @@ async def RedDwarf(ctx):
 #===============================================================================================================
 # And now we are putting in the Squirrel of Judgment so he can decide what you're guilty of.
 #===============================================================================================================
-@bot.command(name = "squirreljudge")
+@bot.command(name = "squirreljudge", help="Get judged by the Squirrel of Judgment.")
 async def judge(ctx):
 
       judgments = [ "Guilty",
@@ -162,7 +172,7 @@ async def judge(ctx):
                            "Not guilty by reason of mental disease or defect.",
                            "You're gulty of crimes agaisnt squirrel kind, porpoise.",
                            "Guilty of High Treason.",
-                           "Guilty of starving squirrels by keeping them from your bird feeder."]
+                           "Guilty of starving squirrels by keeping them from their bird feeder."]
 
       
       response = random.choice(judgments)
@@ -175,6 +185,14 @@ async def judge(ctx):
                                           
       return
 
+@bot.command (name = "8ball", help = "Ask the Eight Ball a question.")
+async def _8ball(ctx):
+      
+      choices = [ "yes", "no", "Ask again", "Hard to See", "Ok, Boomer!", "Difficult to Tell.", "Most Definitely", "Maybe.", "Ask the Squirrel of Judgment."]
+      response = random.choice(choices)
+      await ctx.send (response)
+
+      return;
 
 bot.run(TOKEN)
 
