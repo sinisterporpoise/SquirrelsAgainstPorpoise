@@ -93,7 +93,8 @@ async def posw(ctx):
                                         'It\'s not a troll group. It\'s the opposite of a troll group.',
                                         'You\'re inept in philosophy.',
                                         'I am exceptionally clear and it is quite unreasonble to make what is normative and understood by anyone who is competent enough to discuss any of this require such unreasonable explicistness.',
-                                        'I have never once had any philosopher say I use dishonest rhetorical tacics. NEVER ONE.']
+                                        'I have never once had any philosopher say I use dishonest rhetorical tacics. NEVER ONE.',
+                                         'I\'ve been cited by Creation.com']
      
 
             
