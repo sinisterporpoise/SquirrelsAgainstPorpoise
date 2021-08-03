@@ -94,7 +94,8 @@ async def posw(ctx):
                                         'You\'re inept in philosophy.',
                                         'I am exceptionally clear and it is quite unreasonble to make what is normative and understood by anyone who is competent enough to discuss any of this require such unreasonable explicistness.',
                                         'I have never once had any philosopher say I use dishonest rhetorical tacics. NEVER ONE.',
-                                         'I\'ve been cited by Creation.com']
+                                         'I\'ve been cited by Creation.com',
+                                         'I\'m not a prescriptivist. I\'m the opposite of a prescriptivist.']
      
 
             
